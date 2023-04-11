@@ -1,0 +1,690 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>SEOHYEON CHO</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 1280px;
+		color: rgb(55, 53, 47);
+		margin-left: 20px; /* 여백값을 변경해주세요 */
+	}
+	* {
+		font-size: 98%;
+	}
+}
+
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.375rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 0.75rem;
+	margin-top: 1.25rem;
+}
+
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="b410217b-c2c4-460a-8681-feaf33cc01f1" class="page sans"><header><h1 class="page-title">SEOHYEON CHO</h1></header><div class="page-body"><hr id="23ec61ca-8402-4a79-92d4-832a8c4fed27"/><div id="ce4a852c-6ad1-44f1-a7de-8a4b21e31073" class="column-list"><div id="92a97b1d-051b-44f0-9d45-28bae4d45a06" style="width:37.5%" class="column"><h1 id="bb4c7659-69fb-48ff-8a10-872ae2244b2c" class="">📱 𝘾𝙤𝙣𝙩𝙖𝙘𝙩 𝙄𝙣𝙛𝙤 </h1><p id="68e5faea-22bf-48df-82b5-978153eed785" class=""><a href="mailto:seohyeoncho@gmail.com">seohyeoncho@gmail.com</a></p><p id="b5b71b50-8a78-404a-bacf-a3aba30f0cf7" class="">+821062550353</p><p id="17232e6c-391f-4b36-8e0d-174926e67b2b" class="">
+</p><h1 id="caa29ecb-70c5-43f6-b42f-27954e94d04c" class="">🌎 𝙇𝙖𝙣𝙜𝙪𝙖𝙜𝙚𝙨</h1><ul id="150738e7-4cb9-4fd5-a9a1-d69cbd50b925" class="bulleted-list"><li style="list-style-type:disc">한국어</li></ul><ul id="f6157e90-14ab-466c-90e9-2dca4287afc4" class="bulleted-list"><li style="list-style-type:disc">영어 ⎢TOEIC 985 (2018.08)</li></ul><ul id="c4c1c250-c76e-4dfb-9f47-f3d452634327" class="bulleted-list"><li style="list-style-type:disc">프랑스어 ⎢프랑스 고교 교육과정 졸업 및 대학 입학 자격증
+                 바칼로레아 Baccalauréat 취득 (2011.06)</li></ul><p id="fe2191bb-086d-43bf-b2f7-e64fc73f3bd3" class="">
+</p></div><div id="37dae785-29f4-4f59-b4cc-7784afc9b598" style="width:62.5%" class="column"><p id="24b0e30b-9296-40fb-a2b5-744659c3c96c" class="">
+</p><blockquote id="2b9f1758-6be1-4323-a295-5e7dfb2df48a" class="">프랑스와 미국에서의 다양한 경험 및 경력을 바탕으로 
+글로벌 역량을 겸비한 브랜딩 및 콘텐츠 기획자 <strong>조서현</strong>입니다.</blockquote><ul id="7d0a04d0-f3ce-4343-b4ea-15450ec9a343" class="bulleted-list"><li style="list-style-type:disc">다양한 브랜드 프로젝트 기획, 운영, 홍보</li></ul><ul id="23d83ec1-d8df-43cf-9861-855dbfebf623" class="bulleted-list"><li style="list-style-type:disc">트렌드 리서치 및 분석 리포트 작성 경험</li></ul><ul id="3fb015c4-f201-45fd-be51-e2ee8466c956" class="bulleted-list"><li style="list-style-type:disc">글로벌 커뮤니케이션 및 유관 부서/파트너사/외부 협력사와의 협업 경험</li></ul><p id="3064560c-348d-41a5-9fcc-f18319deac38" class="">
+</p><hr id="41ead27b-f38d-4223-b918-0f1727716166"/><p id="b07f7026-7530-4aa1-b2d6-72122f001f26" class="">
+</p><p id="444b425f-c2ca-4c58-bc80-f8d0833fa544" class="">🔥 새로운 문화를 탐구하는 것과 새로운 일에 도전하는 것을 좋아합니다.</p><p id="cb5487c8-e4f5-4bfe-a909-8fc728cca1ba" class="">🌿 지속 가능한 사회를 위해 프로젝트에 도입할 수 있는 소셜 임팩트적인 부분에 대해 항상 고민합니다.</p><p id="ca87403f-5808-4c42-9acb-5dcad8381385" class="">
+</p></div></div><h1 id="6f2496ce-dcf9-478a-bd31-9b24e195104d" class="">👩🏻‍💻 𝙒𝙤𝙧𝙠 𝙀𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚</h1><h2 id="f786265f-9583-408a-b4e4-fcf00682b7f0" class=""><em><mark class="highlight-gray_background">2019.11 - 2022.04</mark></em> <strong>신규사업팀 프로젝트 매니저 ⎢ HANSUNG F﹒I  </strong>⎢<strong> Seoul</strong></h2><ul id="128097bf-1fa7-459f-807f-1e447707d9cf" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> 레노마 브랜딩 </mark></strong><ul id="4e268f97-45f0-4cff-85b1-8fc98dba0934" class="bulleted-list"><li style="list-style-type:circle"><strong>[레노마 MZ 타깃 라이프스타일 브랜드 - 레노마 유니버스 RENOMA CAFÉ-GALLERY ÉDITION 29CM 런칭]</strong><ul id="a798de51-f67c-4e90-af0d-50c80e7e2e8f" class="bulleted-list"><li style="list-style-type:square"><a href="https://post.29cm.co.kr/12630">29CM 레노마 PT</a> 및 브랜드 런칭에 따른 레노마 브랜드 인지도 제고 - 29CM 내 62k 뷰 수 / 6k 누적 좋아요 수 달성</li></ul><ul id="d2319185-eb0f-4271-a1ed-94c7afa1b9dc" class="bulleted-list"><li style="list-style-type:square">브랜드 컨셉 기획 및 브랜딩 BI 개발 / 룩북 및 상품 크리에이티브 디렉팅 / 16종 총 44 SKU 상품 기획 / 샘플링 / 13개 제조사 커뮤니케이션 / 예산, 매출 및 재고관리</li></ul><ul id="8154ef45-ddea-471f-b2ad-37907d3dd276" class="bulleted-list"><li style="list-style-type:square">쇼룸 VMD</li></ul></li></ul><ul id="c88b4ac9-10d4-45a5-b286-5d963217852b" class="bulleted-list"><li style="list-style-type:circle"><strong>[레노마 통합 브랜드 리뉴얼 사이트 제작]</strong><ul id="ab0251e0-c62a-4d67-86fa-52b37474a397" class="bulleted-list"><li style="list-style-type:square">웹사이트 레퍼런스 &amp; 제작사 리서치</li></ul><ul id="43647a4a-e6da-45e1-93bd-dd8f0a562847" class="bulleted-list"><li style="list-style-type:square">사이트 스토리보드 제작</li></ul></li></ul><ul id="cce1aeb4-ceb3-43aa-b11f-8af23c4754fb" class="bulleted-list"><li style="list-style-type:circle"><strong>[디지털 콘텐츠 제작지원]</strong><ul id="1bfecd40-2487-4720-a5e3-25ab21fdecbb" class="bulleted-list"><li style="list-style-type:square">신규 패션 플랫폼 BI 개발</li></ul><ul id="bc561cee-1ed0-41a6-ba91-e83dd4c85344" class="bulleted-list"><li style="list-style-type:square">신규 패션 플랫폼을 위한 레노마 골프 의류 룩북 컨셉 기획 및 촬영 디렉팅</li></ul><ul id="ec0dd46a-22a1-44fc-b894-6b62c48cee51" class="bulleted-list"><li style="list-style-type:square">레노마 골프 협찬 유튜브 콘텐츠 제작지원 계약 및 협찬의류 이니셜 로고 제작-총 6편 누적 조회수 925만 뷰 수 달성</li></ul></li></ul></li></ul><ul id="8e2a7e5c-e1fe-4451-b53f-4cce08b03eaa" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"> </mark><strong><mark class="highlight-blue_background">글로벌 커뮤니케이션 담당 </mark></strong><ul id="14f8f954-ce12-430f-88d1-9114d6e44d26" class="bulleted-list"><li style="list-style-type:circle">레노마 파리 본사 온라인 커뮤니케이션 및 레노마 디렉터 한국 방문 시 커뮤니케이션 담당</li></ul><ul id="13c23b96-b612-422d-b414-8adae99eb413" class="bulleted-list"><li style="list-style-type:circle">신규 온라인 플랫폼 해외 브랜드 발굴, 바잉 및 수입</li></ul><ul id="efad92c0-c11d-4413-8a35-c6621f9051b5" class="bulleted-list"><li style="list-style-type:circle">해외 사업 투자 제안서 / 영문 라이선스 계약서 번역 및 검토</li></ul></li></ul><ul id="0dc21b04-9b78-4eef-a111-8235224019a9" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"> </mark><strong><mark class="highlight-blue_background">시장 트렌드 분석 및 사업 기획 </mark></strong><ul id="c027f41f-d5dc-4151-a662-79255530879b" class="bulleted-list"><li style="list-style-type:circle">유통/마케팅/비즈니스/기업 등의 시장 분석 및 사업 기획 리포트 제작 및 사내 배포</li></ul></li></ul><ul id="fb59c54a-3006-4ad7-b0e1-dc17519613b7" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> ESG 관련 사업 </mark></strong><ul id="1fb4d6d6-9d93-4545-aa8a-4aa701d15658" class="bulleted-list"><li style="list-style-type:circle"><strong>[한국메세나협회 사업 추진]</strong><ul id="ba9f8102-83c3-418f-97af-c4723e43d30d" class="bulleted-list"><li style="list-style-type:square">야외 어린이 골프 아트 프로젝트 추진 (코로나사태로 인한 잠정 보류)</li></ul></li></ul><ul id="e5b108d6-3f19-4c12-9432-a80641d4f883" class="bulleted-list"><li style="list-style-type:circle"><strong>[레노마X슛포러브(사회공헌 유튜브 채널) 인종차별 반대 캠페인 프로젝트 제작지원]</strong><ul id="561fe29c-e887-4649-8213-3ee263fcfd58" class="bulleted-list"><li style="list-style-type:square">콘텐츠 제작지원 계약 및 데이터 기반 효과 분석 리포트 제작 - 한성에프아이 및 브랜드 인지도 제고 (ROI 6) 및 누적 조회수 98.1k 뷰 수 달성</li></ul></li></ul></li></ul><p id="8d096ff6-5614-4483-aa03-ac6e038f71b6" class="">
+</p><h2 id="e35781c9-c475-4883-b58f-435e053c7970" class=""><em><mark class="highlight-gray_background">2019.01 - 2019.08</mark></em> <strong>듀베티카 디자인팀 계약직 디자이너 </strong>⎢<strong> F&amp;F </strong>⎢<strong> Seoul</strong></h2><ul id="9c38157e-bb40-408f-a8fa-6d842cc6ed03" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> 듀베티카 디자인 작업 </mark></strong><ul id="11f82e2d-a996-4209-8adf-43eced635b45" class="bulleted-list"><li style="list-style-type:circle">FW19/20-SS20 듀베티카 런칭 디자인 작업지시서 작성 및 상품 샘플링</li></ul><ul id="cb95615d-dcd1-4cdc-85e2-8d24158ca3e4" class="bulleted-list"><li style="list-style-type:circle">트렌드 리서치</li></ul></li></ul><ul id="1fd2c0d1-10c1-4f70-84eb-36a5eb5503cb" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-blue_background"> </mark><strong><mark class="highlight-blue_background">듀베티카 이탈리아 본사 커뮤니케이션 담당 </mark></strong><ul id="9c0cffca-9134-45c4-a522-1c71bacacf95" class="bulleted-list"><li style="list-style-type:circle">이탈리아 본사 온라인 커뮤니케이션</li></ul><ul id="6771aa17-8f51-4968-afc2-aa33119490fe" class="bulleted-list"><li style="list-style-type:circle">해외 수출용 인보이스 작성 담당</li></ul></li></ul><p id="2053dada-e79b-4a4b-b858-492987698154" class="">
+</p><h2 id="e6adc2a8-b2d0-4ccf-9d77-f243398277d6" class=""><em><mark class="highlight-gray_background">2018.09 - 2018.12</mark></em> <strong>패션정보실 계약직 사원 </strong>⎢<strong> DAEHYUN </strong>⎢<strong> Seoul</strong></h2><ul id="f1eb345d-968b-460b-b239-bcc20e328bd5" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> SS19 트렌드 리서치 </mark></strong><ul id="9ba254ac-5677-4e56-b196-911132847710" class="bulleted-list"><li style="list-style-type:circle">시즌 제너럴 트렌드 및 해외 여성복 컬렉션 미국/프랑스 주요 기사 번역 및 위클리 리포트 제작</li></ul><ul id="da87c540-4d40-4569-87de-1783b72ba207" class="bulleted-list"><li style="list-style-type:circle">국내외 패션 마켓/유통 트렌드 위클리 리포트 제작</li></ul></li></ul><p id="2685040f-a4ff-4835-98f3-919487f89742" class="">
+</p><h2 id="a7d013b3-1f32-4ce2-b1b0-6795aed7a235" class=""><em><mark class="highlight-gray_background">2018.01 - 2018.04</mark></em> <strong>패션 디자인 인턴 사원 </strong>⎢<strong> NARCISO RODRIGUEZ </strong>⎢<strong> New York</strong></h2><ul id="dfe4945d-0db7-438f-a20e-54446fd6199e" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> 뉴욕 패션위크 FW18 레디투웨어 컬렉션 </mark></strong><ul id="c621659c-083e-4eec-b58f-9bcfc160bba2" class="bulleted-list"><li style="list-style-type:circle">바이어 테크니컬 드로잉 작업 및 모델피팅</li></ul></li></ul><ul id="4e7d70fd-7a70-4f08-a44b-187a6b5b6334" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> 패션테크닉 리서치 </mark></strong></li></ul><p id="180d8668-f3af-445b-ad4b-5f1b1655d7de" class="">
+</p><h2 id="77694bd9-13e2-4fd2-af2c-398a4f782e9f" class=""><em><mark class="highlight-gray_background">2015.06 - 2015.12</mark></em> <strong>패션 디자인 인턴 사원 </strong>⎢<strong> G-III APPAREL GROUP </strong>⎢<strong> New York</strong></h2><ul id="9662a827-101c-46fc-9694-d45f3c040b4e" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> 쇼룸 관리 </mark></strong></li></ul><ul id="85acbf28-6ff3-4623-855c-7c31751dbe9b" class="bulleted-list"><li style="list-style-type:disc"><strong><mark class="highlight-blue_background"> 샘플 패브릭/딜리버리/디자인 보드 업데이트 </mark></strong></li></ul><p id="a861d67a-feec-4a7e-b74c-44af39823007" class="">
+</p><h1 id="6bba4389-8ea9-4fec-8742-c3079b7723c3" class="">📚 𝙀𝙙𝙪𝙘𝙖𝙩𝙞𝙤𝙣</h1><p id="62b7abae-0fc7-4842-b850-1fae7c3dcb0c" class=""><em><mark class="highlight-gray_background">2013.08 - 2017.05</mark></em> <strong>Parsons School of Design, USA </strong>⎢<strong> BFA Fashion Design</strong><div class="indented"><p id="ab35ed22-02d1-4d58-b095-4a9b3c0e380a" class="">졸업 작품: &lt;Blind Dream&gt; 시각장애인을 포함한, 모든 이들을 위한 컬렉션.</p></div></p><p id="5f859cad-e681-4a94-ab79-b88c52a4ace4" class=""><em><mark class="highlight-gray_background">2011.08 - 2012.06</mark></em> <strong>Aix-Marseille Université, France </strong>⎢<strong> 경영학과</strong><div class="indented"><p id="f00c1000-aa7f-4185-aa84-4cffa0cf854e" class="">1년 이수 후 중퇴</p></div></p><p id="1324783e-227d-4f1f-8f41-b494b21c2d41" class=""><em><mark class="highlight-gray_background">2006.08 - 2011.06</mark></em> <strong>하비에르 프랑스 국제학교, South Korea</strong><div class="indented"><p id="8d7311c7-9c14-40af-8fb7-77efa7affdde" class="">
+</p></div></p><h1 id="5339f834-e219-417a-b53d-89690fecb05f" class="">🏅 𝘼𝙬𝙖𝙧𝙙 / 𝙎𝙘𝙝𝙤𝙡𝙖𝙧𝙨𝙝𝙞𝙥 / 𝙊𝙩𝙝𝙚𝙧𝙨</h1><p id="a9b9a37e-21d7-4f85-a40c-3d7e60e397b4" class=""><em><mark class="highlight-gray_background">2023.02</mark></em> <strong>GAIQ(Google Analytics) 자격증 취득</strong></p><p id="bf4150aa-4b89-48d3-8e3f-ee24eff90de2" class=""><em><mark class="highlight-gray_background">2016.11</mark></em> <strong>Politecnico Calzaturiero X Parsons Shoes Competition Finalist</strong><div class="indented"><p id="4227fad5-c393-45ae-8c4f-49e4edf2a7b2" class=""><a href="https://seohyeoncho.wixsite.com/official/project-1">Thesis: &lt;Blind Dream&gt; Footwear Collection</a></p></div></p><p id="5cc73575-d767-4fae-901d-65c7af4611f3" class=""><em><mark class="highlight-gray_background">2013.08 - 2017.05</mark></em> <strong>Parsons School of Design, BFA Dean’s Scholarship</strong></p><p id="2ca8a866-bf67-4881-aa84-7bb844794146" class="">
+</p><h1 id="23355c4b-a6a0-4092-bc16-784ea8f9209a" class="">💡  𝙎𝙠𝙞𝙡𝙡𝙨 </h1><div id="48315cbf-74ff-42a2-a736-593f86ae9d67" class="column-list"><div id="dee6a1af-304f-4b92-b288-bae553974ce3" style="width:18.75%" class="column"><p id="0298fd18-ca94-4732-b01b-deadb27863c2" class="">Branding</p><p id="1ad6e5ee-7ae5-4076-949c-4010297e8224" class="">Adobe InDesign </p><p id="c93fbdf7-0e1a-4698-a6d7-036ae0d43314" class="">Adobe Photoshop</p><p id="957abb82-8724-488a-8b3a-62454d896522" class="">Adobe Illustrator</p><p id="67e47b3c-8be2-4a20-8999-bceff251c818" class="">Adobe Premiere Pro </p><p id="7718a541-0e30-43ea-93c9-c741cc435ce6" class="">MS Word                           </p><p id="03452074-8eb4-4df4-a368-767585a71786" class="">MS Excel                           </p><p id="5250bdba-c3f1-4bae-85f8-8acc6b3f3dda" class="">MS PowerPoint                 </p><p id="d09bb5ca-dfec-4b2a-920f-a6da4fa7c9a2" class="">Google Analytics             </p></div><div id="db6f8e6e-2788-45c5-bfb8-f8e276d61aee" style="width:81.25%" class="column"><p id="5ec387ab-e3e9-43da-8340-47080c0f9c56" class="">🔵 🔵 🔵</p><p id="279d4033-e006-48f5-8010-79ccce58d2a5" class="">🔵 🔵 🔵</p><p id="d8e056f1-be26-43e8-ae1b-f6faf6819a42" class="">🔵 🔵 🔵</p><p id="b8f5cbf8-4175-445c-8089-bf6eb8ce5ff6" class="">🔵 🔵 🔵</p><p id="459d900b-1556-4c60-b7c4-408d937ca316" class="">🔵 ⚪️ ⚪️</p><p id="f6213590-3a9a-4958-91c7-168ac8302f44" class="">🔵 🔵 ⚪️</p><p id="803989a1-19f4-4266-8993-825de9abf712" class="">🔵 🔵 ⚪️</p><p id="e34dd095-3450-4d1f-ad5a-bd86c9337102" class="">🔵 🔵 ⚪️</p><p id="4dac3d31-67b1-4996-ab77-c67e31bca9a6" class="">🔵 ⚪️ ⚪️</p></div></div></div></article></body></html>
